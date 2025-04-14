@@ -31,7 +31,7 @@ export const handler = async (event) => {
     }
 
     const { data, error } = await supabase
-      .from('portfolio_views')
+      .from('visits')
       .select('*')
       .gte('timestamp', startDate.toISOString())
       .lte('timestamp', endDate.toISOString())

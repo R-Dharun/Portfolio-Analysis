@@ -69,7 +69,7 @@ function App() {
         }
 
         const { data: viewsData, error: supabaseError } = await supabase
-          .from('portfolio_views')
+          .from('visits')
           .select('*')
           .gte('timestamp', startDate.toISOString())
           .lte('timestamp', now.toISOString())
